@@ -1,3 +1,4 @@
+/* ROOT */
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -14,15 +15,8 @@
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
   --visibility-color: #333333cc;
-}
-
-:root {
   --nav-color: #a8a9b4;
   --nav-hover-color: #ffffff;
-  --nav-mobile-background-color: #333333;
-  --nav-dropdown-background-color: #333333;
-  --nav-dropdown-color: #a8a9b4;
-  --nav-dropdown-hover-color: #ffffff;
 }
 
 .light-background {
@@ -69,9 +63,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/************************************
-# Header
-*************************************/
+/* Header */
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -176,9 +168,7 @@ h6 {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+/* Navigation Menu */
 .mobile-nav-toggle {
   display: none;
 }
@@ -226,9 +216,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# FOOTER
---------------------------------------------------------------*/
+/* FOOTER */
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -238,9 +226,7 @@ h6 {
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
+/* Scroll Top Btn */
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -271,32 +257,16 @@ h6 {
   opacity: 1;
   bottom: 15px;
 }
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
-section,
-.section {
+/* Section */
+section {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 2rem;
   position: relative;
 }
 
@@ -323,9 +293,7 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Home Section
---------------------------------------------------------------*/
+/* Home */
 .home {
   width: 100%;
   min-height: 100vh;
@@ -403,9 +371,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+/* About Section */
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
@@ -433,9 +399,7 @@ section,
   line-height: 0;
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
+/* Resume Section */
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -492,9 +456,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+/* Contact */
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -541,4 +503,11 @@ section,
 .contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
+}
+
+/* Disable aos animation delay for mobile devices */
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
 }
