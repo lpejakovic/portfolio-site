@@ -382,17 +382,21 @@ section {
   padding: 0;
 }
 
-.about .content ul li {
+.about .content ul li,
+.skills .container ul li {
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
-.about .content ul strong {
+.about .content ul strong,
+.skills .container ul strong {
   margin-right: 10px;
 }
 
-.about .content ul i {
+.about .content ul i,
+.skills .container ul i
+{
   font-size: 16px;
   margin-right: 5px;
   color: var(--accent-color);
