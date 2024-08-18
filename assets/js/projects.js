@@ -115,7 +115,7 @@ function projectsToHTML() {
     const professionalRow = document.getElementById('professional-projects-row');
     projectListJson.professional.forEach(function (project) {
         let projectHtml = `
-                    <div class="col-lg-6">
+                    <div class="col-xl-4 col-lg-6">
                         <div class="card">
                             <div class="card-header bg-transparent">
                                 <h5 class="card-title">${project.title}</h5>
