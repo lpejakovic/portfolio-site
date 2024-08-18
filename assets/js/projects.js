@@ -79,6 +79,30 @@ const projectListJson = {
                     "text": "Preview"
                 }
             ]
+        },
+        {
+            "title": "Baby calculator",
+            "subtitle": "Python, Flask, Gunicorn, HTML, CSS, JS",
+            "description": "Simple website that takes a date of birth as input, calculates the difference and returns how many weeks the baby is old.",
+            "links": [
+                {
+                    "url": "https://bc.luka-pejakovic.from.hr/",
+                    "icon": "fa fa-globe",
+                    "text": "Preview"
+                }
+            ]
+        },
+        {
+            "title": "BEBS.",
+            "subtitle": "PHP, WordPress, Oxygen, SQLite",
+            "description": "Created a blog website for my wife on a WordPress platform, with a few custom functionalities. It's pretty simple and elegant, but the real magic is behind the hood where all data is stored on SQLite, instead of dedicated RDBMS.",
+            "links": [
+                {
+                    "url": "http://blog.luka-pejakovic.from.hr/",
+                    "icon": "fa fa-globe",
+                    "text": "Preview"
+                }
+            ]
         }
     ]
 };
@@ -119,7 +143,7 @@ function projectsToHTML() {
 
         professionalRow.innerHTML += projectHtml;
     });
-    projectsContainer.innerHTML += '</div></div>';
+    projectsContainer.innerHTML += '</div>';
 
     projectsContainer.innerHTML += '<h3>Private</h3>';
     projectsContainer.innerHTML += '<div class="row" id="private-projects-row">';
@@ -127,7 +151,7 @@ function projectsToHTML() {
     const privateRow = document.getElementById('private-projects-row');
     projectListJson.private.forEach(function (project) {
         let projectHtml = `
-                    <div class="col-xl-4 col-lg-6 col-md-12">
+                    <div class="col-xl-4 col-lg-6">
                         <div class="card">
                             <div class="card-header bg-transparent">
                                 <h5 class="card-title">${project.title}</h5>
