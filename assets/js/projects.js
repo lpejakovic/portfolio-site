@@ -77,6 +77,11 @@ const projectListJson = {
                     "url": "https://luka-pejakovic.from.hr",
                     "icon": "fa fa-globe",
                     "text": "Preview"
+                },
+                {
+                    "url": "https://github.com/lpejakovic/portfolio-site",
+                    "icon": "fa fa-github",
+                    "text": "GitHub"
                 }
             ]
         },
@@ -86,9 +91,14 @@ const projectListJson = {
             "description": "Simple website that takes a date of birth as input, calculates the difference and returns how many weeks the baby is old.",
             "links": [
                 {
-                    "url": "https://bc.luka-pejakovic.from.hr/",
+                    "url": "https://bc.luka-pejakovic.from.hr",
                     "icon": "fa fa-globe",
                     "text": "Preview"
+                },
+                {
+                    "url": "https://github.com/lpejakovic/baby-calculator",
+                    "icon": "fa fa-github",
+                    "text": "GitHub"
                 }
             ]
         },
@@ -98,7 +108,7 @@ const projectListJson = {
             "description": "Created a blog website for my wife on a WordPress platform, with a few custom functionalities. It's pretty simple and elegant, but the real magic is behind the hood where all data is stored on SQLite, instead of dedicated RDBMS.",
             "links": [
                 {
-                    "url": "http://blog.luka-pejakovic.from.hr/",
+                    "url": "http://blog.luka-pejakovic.from.hr",
                     "icon": "fa fa-globe",
                     "text": "Preview"
                 }
