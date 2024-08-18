@@ -223,7 +223,8 @@ h6 {
   font-size: 14px;
   padding: 40px 0;
   position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 /* Scroll Top Btn */
@@ -395,8 +396,7 @@ section {
 }
 
 .about .content ul i,
-.skills .container ul i
-{
+.skills .container ul i {
   font-size: 16px;
   margin-right: 5px;
   color: var(--accent-color);
@@ -458,6 +458,21 @@ section {
   top: 0;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+}
+
+/* Portfolio */
+#projects-container .row {
+  row-gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+#projects-container .card {
+  height: 100%;
+}
+
+#projects-container a.card-link {
+  padding: 0.75rem;
+  padding-left: 0;
 }
 
 /* Contact */
