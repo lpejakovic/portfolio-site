@@ -29,11 +29,15 @@
     if (link.hasAttribute('data-email-show')) link.textContent = email;
   });
 
-  /** Copyright year */
+  /** Copyright year and years of experience */
+  const currentYear = new Date().getFullYear();
   const yearEl = document.querySelector('#copyright-year');
   if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+    yearEl.textContent = currentYear;
   }
+  document.querySelectorAll('[data-years-since]').forEach(el => {
+    el.textContent = currentYear - Number(el.dataset.yearsSince);
+  });
 
   /** Scroll top button */
   let scrollTop = document.querySelector('.scroll-top');
