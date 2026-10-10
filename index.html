@@ -36,12 +36,12 @@
   <!-- Fonts -->
   <link rel="preload" href="assets/fonts/roboto-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/fonts.css?v=2610111" />
+  <link rel="stylesheet" href="assets/css/fonts.css?v=2610113" />
   <!-- 3rd party CSS -->
-  <link rel="stylesheet" href="assets/vendor/bootstrap.trimmed.css?v=2610111" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap.trimmed.css?v=2610113" />
   <link rel="stylesheet" href="assets/vendor/aos.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css?v=2610111" />
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css?v=2610113" />
 
   <!-- Schema.org Markup for Organization -->
   <script type="application/ld+json">
@@ -88,6 +88,7 @@
     <symbol id="i-android" viewBox="0 0 576 512"><path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"/></symbol>
     <symbol id="i-apple" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></symbol>
   </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header id="header" class="header dark-background d-flex flex-column">
     <button type="button" class="header-toggle d-xl-none" aria-label="Toggle navigation" aria-controls="header" aria-expanded="false">
       <svg class="icon" aria-hidden="true"><use href="#i-bars"></use></svg>
@@ -95,8 +96,8 @@
     <div class="profile-img">
       <img src="assets/img/profile-placeholder.jpg" alt="Profile image" width="800" height="800" class="img-fluid rounded-circle" />
     </div>
-    <a href="/" class="logo d-flex align-items-center justify-content-center">
-      <h1 id="name">Luka Pejaković</h1>
+    <a href="#home" class="logo d-flex align-items-center justify-content-center">
+      <span class="site-name">Luka Pejaković</span>
     </a>
     <!-- Language selector
         <select id="language-selector" class="form-select form-select-sm mb-3" aria-label="Language selector">
@@ -112,7 +113,7 @@
         <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
       </a>
     </div>
-    <nav id="navmenu" class="navmenu">
+    <nav id="navmenu" class="navmenu" aria-label="Main">
       <ul>
         <li>
           <a href="#home" class="active">
@@ -127,9 +128,9 @@
           </a>
         </li>
         <li>
-          <a href="#skills">
-            <svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>
-            Skills
+          <a href="#portfolio">
+            <svg class="icon" aria-hidden="true"><use href="#i-file-code"></use></svg>
+            Portfolio
           </a>
         </li>
         <li>
@@ -139,9 +140,9 @@
           </a>
         </li>
         <li>
-          <a href="#portfolio">
-            <svg class="icon" aria-hidden="true"><use href="#i-file-code"></use></svg>
-            Portfolio
+          <a href="#skills">
+            <svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>
+            Skills
           </a>
         </li>
         <li>
@@ -153,19 +154,28 @@
       </ul>
     </nav>
   </header>
-  <main class="main">
+  <main class="main" id="main" tabindex="-1">
     <!-- HOME -->
     <section id="home" class="home section dark-background">
       <img src="assets/img/home-background-1792.webp"
         srcset="assets/img/home-background-768.webp 768w, assets/img/home-background-1280.webp 1280w, assets/img/home-background-1792.webp 1792w"
         sizes="(min-width: 1200px) calc(100vw - 300px), (orientation: portrait) 175vh, 100vw"
-        width="1792" height="1024" fetchpriority="high" alt="Home background image" />
+        width="1792" height="1024" fetchpriority="high" alt="" />
       <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
-        <h2>Luka Pejaković</h2>
-        <p>
-          <span class="typed"
-            data-typed-items="Software Engineer, Team Lead, Full-Stack Developer, Mobile App Developer, Problem Solver">Software Engineer</span>
+        <h1>Luka Pejaković</h1>
+        <p class="home-role">
+          <span class="sr-only">Team Lead &amp; Software Engineer</span>
+          <span class="typed" aria-hidden="true"
+            data-typed-items="Team Lead, Software Engineer, Full-Stack Developer, Mobile App Developer, Problem Solver">Team Lead &amp; Software Engineer</span>
         </p>
+        <p class="home-tagline">
+          I lead a development team building e-commerce, mobile and real-time systems with .NET, PHP and modern web
+          technologies.
+        </p>
+        <div class="home-actions">
+          <a class="button button-primary" href="#portfolio">View projects</a>
+          <a class="button button-light" href="#contact">Get in touch</a>
+        </div>
       </div>
     </section>
     <!-- ABOUT -->
@@ -180,12 +190,9 @@
         </p>
       </div>
       <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile-placeholder.jpg" width="800" height="800" class="img-fluid" alt="Full sized profile image" />
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Team Lead &amp; Software Engineer</h2>
+        <div class="row gy-4">
+          <div class="content">
+            <h3>Team Lead &amp; Software Engineer</h3>
             <p class="fst-italic py-3">Born and raised in Rijeka, where I got my masters degree in computer science.</p>
             <div class="row">
               <div class="col-lg-6">
@@ -202,8 +209,7 @@
                   </li>
                   <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-                    <strong>Website:</strong>
-                    <span>luka-pejakovic.from.hr</span>
+                    <strong>Degree:</strong> <span>Master, Computer Science</span>
                   </li>
                 </ul>
               </div>
@@ -211,17 +217,13 @@
                 <ul>
                   <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-                    <strong>Degree:</strong> <span>Master, Computer Science</span>
-                  </li>
-                  <li>
-                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/pejakovic-luka" target="_blank">pejakovic-luka</a>
+                    <a href="https://www.linkedin.com/in/pejakovic-luka" target="_blank" rel="noopener">pejakovic-luka</a>
                   </li>
                   <li>
                     <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>GitHub:</strong>
-                    <a href="https://github.com/lpejakovic" target="_blank">lpejakovic</a>
+                    <a href="https://github.com/lpejakovic" target="_blank" rel="noopener">lpejakovic</a>
                   </li>
                 </ul>
               </div>
@@ -231,126 +233,12 @@
         </div>
       </div>
     </section>
-    <!-- SKILLS -->
-    <section id="skills" class="skills light-background">
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio light-background">
       <div class="container section-title aos-init" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>
-          While I am tech-agnostic, I'm proficient in a variety of technologies and tools, enabling
-          me to adapt to the needs of any project, and to choose the right ones when making decisions for my team.
-          My expertise spans across different programming languages, frameworks, databases and development tools.
-          I thrive in collaborative environments and am committed to continuous learning and improvement.
-          Below are some of the key skills that I bring to the table:
-        </p>
+        <h2>Portfolio</h2>
       </div>
-      <div class="container">
-        <div class="tech-skills row aos-init" data-aos="fade-up" data-aos-delay="100">
-          <!-- Technical Skills -->
-          <h4>Technical Skills:</h4>
-          <ul class="list-unstyled">
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-              <strong>Programming Languages:</strong>
-              <span>C#, PHP, JavaScript, TypeScript, HTML, CSS/SCSS, SQL, Python, Rust</span>
-            </li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-              <strong>Frameworks and Libraries:</strong>
-              <span>ASP.NET Core (Minimal APIs, SignalR, EF Core), ASP.NET MVC, .NET MAUI, Xamarin.Forms, WordPress, WooCommerce, Vue 3, Axum/Tokio, Flask, Bootstrap, jQuery</span>
-            </li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-              <strong>Databases:</strong>
-              <span>MSSQL, MySQL, SQLite</span>
-            </li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-              <strong>Testing:</strong>
-              <span>xUnit, Playwright, k6</span>
-            </li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-              <strong>DevOps and Tooling:</strong>
-              <span>Git and GitHub (pull request workflow, Actions), SVN, Linux, Nginx, Gulp, esbuild</span>
-            </li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
-              <strong>Cloud Services:</strong>
-              <span>AWS, DigitalOcean</span>
-            </li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col-md-6 aos-init" data-aos="fade-up" data-aos-delay="200">
-            <!-- Soft Skills -->
-            <h4>Soft Skills:</h4>
-            <ul class="list-unstyled">
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Problem Solving</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Strong Communication</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Troubleshooting</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Team Collaboration</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Adaptability</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Time Management</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Team Leadership</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Mentoring and Code Review</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Project Planning</strong>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6 aos-init" data-aos="fade-up" data-aos-delay="300">
-            <!-- Areas of Expertise -->
-            <h4>Areas of Expertise:</h4>
-            <ul class="list-unstyled">
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Software Design and Architecture</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Database Modeling</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>API Development</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Full Stack Development</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Mobile Development</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>DevOps</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Testing and QA</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Technical Leadership</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>E-commerce and ERP Integration</strong>
-              </li>
-              <li>
-                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Real-time Communication</strong>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="container aos-init" data-aos="fade-up" data-aos-delay="100" id="projects-container">
       </div>
     </section>
     <!-- RESUME -->
@@ -376,12 +264,12 @@
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>Master's degree, Computer Science</h4>
-              <h5>2014 - 2016</h5>
+              <p class="resume-date">2014 - 2016</p>
               <p><em>Faculty of Engineering, University of Rijeka, Croatia</em></p>
             </div>
             <div class="resume-item">
               <h4>Bachelor's degree, Computer Science</h4>
-              <h5>2010 - 2014</h5>
+              <p class="resume-date">2010 - 2014</p>
               <p><em>Faculty of Engineering, University of Rijeka, Croatia</em></p>
             </div>
           </div>
@@ -389,7 +277,7 @@
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>Team Lead &amp; Software Engineer</h4>
-              <h5>2024 - Present</h5>
+              <p class="resume-date">2024 - Present</p>
               <p><em>4th Dimension d.o.o., Zagreb, Croatia</em></p>
               <ul>
                 <li>Lead a team of developers: project planning, priorities and task breakdown</li>
@@ -401,7 +289,7 @@
             </div>
             <div class="resume-item">
               <h4>Software Engineer</h4>
-              <h5>2017 - 2024</h5>
+              <p class="resume-date">2017 - 2024</p>
               <p><em>4th Dimension d.o.o., Zagreb, Croatia</em></p>
               <ul>
                 <li>Developed web applications</li>
@@ -414,45 +302,135 @@
         </div>
       </div>
     </section>
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="portfolio light-background">
+    <!-- SKILLS -->
+    <section id="skills" class="skills light-background">
       <div class="container section-title aos-init" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Skills</h2>
+        <p>
+          I'm tech-agnostic and pick the right tool for each project. These are the technologies I work with most,
+          and the ones I choose from when making decisions for my team.
+        </p>
       </div>
-      <div class="container aos-init" data-aos="fade-up" data-aos-delay="100" id="projects-container">
+      <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
+        <dl class="skill-groups">
+          <div class="skill-group">
+            <dt>Languages</dt>
+            <dd>
+              <ul class="tags">
+              <li>C#</li>
+              <li>PHP</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>HTML</li>
+              <li>CSS/SCSS</li>
+              <li>SQL</li>
+              <li>Python</li>
+              <li>Rust</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill-group">
+            <dt>Frameworks and libraries</dt>
+            <dd>
+              <ul class="tags">
+              <li>ASP.NET Core</li>
+              <li>Minimal APIs</li>
+              <li>SignalR</li>
+              <li>EF Core</li>
+              <li>ASP.NET MVC</li>
+              <li>.NET MAUI</li>
+              <li>Xamarin.Forms</li>
+              <li>WordPress</li>
+              <li>WooCommerce</li>
+              <li>Vue 3</li>
+              <li>Axum/Tokio</li>
+              <li>Flask</li>
+              <li>Bootstrap</li>
+              <li>jQuery</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill-group">
+            <dt>Databases</dt>
+            <dd>
+              <ul class="tags">
+              <li>MSSQL</li>
+              <li>MySQL</li>
+              <li>SQLite</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill-group">
+            <dt>Testing</dt>
+            <dd>
+              <ul class="tags">
+              <li>xUnit</li>
+              <li>Playwright</li>
+              <li>k6</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill-group">
+            <dt>DevOps and tooling</dt>
+            <dd>
+              <ul class="tags">
+              <li>Git</li>
+              <li>GitHub (PR workflow, Actions)</li>
+              <li>SVN</li>
+              <li>Linux</li>
+              <li>Nginx</li>
+              <li>Gulp</li>
+              <li>esbuild</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill-group">
+            <dt>Cloud</dt>
+            <dd>
+              <ul class="tags">
+              <li>AWS</li>
+              <li>DigitalOcean</li>
+              </ul>
+            </dd>
+          </div>
+          <div class="skill-group">
+            <dt>Areas of expertise</dt>
+            <dd>
+              <ul class="tags">
+              <li>Technical Leadership</li>
+              <li>Software Design and Architecture</li>
+              <li>Project Planning</li>
+              <li>Mentoring and Code Review</li>
+              <li>E-commerce and ERP Integration</li>
+              <li>API Development</li>
+              <li>Real-time Communication</li>
+              <li>Full Stack Development</li>
+              <li>Mobile Development</li>
+              <li>Database Modeling</li>
+              <li>DevOps</li>
+              <li>Testing and QA</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
     <!-- CONTACT -->
     <section id="contact" class="contact">
       <div class="container section-title aos-init" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>
-          Feel free to contact me on <a href="#contact" data-email-user="luka.pejakovic" data-email-domain="gmail.com">Email</a>,
-          <a href="https://www.linkedin.com/in/pejakovic-luka" target="_blank">LinkedIn</a>
-          or check out my projects on <a href="https://github.com/lpejakovic" target="_blank">GitHub</a>
-        </p>
+        <p>Have a project, a question, or just want to connect? Get in touch.</p>
       </div>
       <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="info-wrap">
-              <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="200">
-                <svg class="icon flex-shrink-0" aria-hidden="true"><use href="#i-map-marker"></use></svg>
-                <div>
-                  <h3>Current Location</h3>
-                  <p>Zagreb, Croatia</p>
-                </div>
-              </div>
-              <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="300">
-                <svg class="icon flex-shrink-0" aria-hidden="true"><use href="#i-envelope"></use></svg>
-                <div>
-                  <h3>Email</h3>
-                  <p><a href="#contact" data-email-user="luka.pejakovic" data-email-domain="gmail.com" data-email-show>luka.pejakovic [at] gmail.com</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="#contact" data-email-user="luka.pejakovic" data-email-domain="gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg> Email me</a>
+          <a class="button button-outline" href="https://www.linkedin.com/in/pejakovic-luka" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg> LinkedIn</a>
+          <a class="button button-outline" href="https://github.com/lpejakovic" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> GitHub</a>
         </div>
+        <ul class="contact-details">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg> <a href="#contact" data-email-user="luka.pejakovic" data-email-domain="gmail.com" data-email-show>luka.pejakovic [at] gmail.com</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-map-marker"></use></svg> Zagreb, Croatia</li>
+        </ul>
       </div>
     </section>
   </main>
@@ -470,8 +448,8 @@
   <!-- JS files -->
   <script src="assets/vendor/typed.umd.js"></script>
   <script src="assets/vendor/aos.js"></script>
-  <script src="assets/js/projects.js?v=2610111"></script>
-  <script src="assets/js/main.js?v=2610111"></script>
+  <script src="assets/js/projects.js?v=2610113"></script>
+  <script src="assets/js/main.js?v=2610113"></script>
 </body>
 
 </html>

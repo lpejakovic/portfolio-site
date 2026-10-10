@@ -1,26 +1,37 @@
 (function () {
   "use strict";
 
-   /** Header toggle */
-   const headerToggleBtn = document.querySelector('.header-toggle');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const scrollBehavior = reducedMotion ? 'auto' : 'smooth';
 
-   function headerToggle() {
-     document.querySelector('#header').classList.toggle('header-show');
-     const isOpen = document.querySelector('#header').classList.contains('header-show');
-     headerToggleBtn.querySelector('use').setAttribute('href', isOpen ? '#i-times' : '#i-bars');
-     headerToggleBtn.setAttribute('aria-expanded', isOpen);
-   }
-   headerToggleBtn.addEventListener('click', headerToggle);
- 
-   /** Hide mobile nav on same-page/hash links */
-   document.querySelectorAll('#navmenu a').forEach(navmenu => {
-     navmenu.addEventListener('click', () => {
-       if (document.querySelector('.header-show')) {
-         headerToggle();
-       }
-     });
- 
-   });
+  /** Header toggle (mobile): the closed menu is hidden in CSS, so its links can't be tabbed into. */
+  const header = document.querySelector('#header');
+  const headerToggleBtn = document.querySelector('.header-toggle');
+
+  function headerToggle() {
+    const isOpen = header.classList.toggle('header-show');
+    headerToggleBtn.querySelector('use').setAttribute('href', isOpen ? '#i-times' : '#i-bars');
+    headerToggleBtn.setAttribute('aria-expanded', isOpen);
+    if (isOpen) header.querySelector('#navmenu a').focus();
+  }
+  headerToggleBtn.addEventListener('click', headerToggle);
+
+  /** Escape closes the open mobile menu and returns focus to the toggle */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && header.classList.contains('header-show')) {
+      headerToggle();
+      headerToggleBtn.focus();
+    }
+  });
+
+  /** Hide mobile nav on same-page/hash links */
+  header.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (header.classList.contains('header-show')) {
+        headerToggle();
+      }
+    });
+  });
 
   /** Email links are assembled here so the address isn't in the HTML for scrapers. */
   document.querySelectorAll('[data-email-user]').forEach(link => {
@@ -39,16 +50,16 @@
     el.textContent = currentYear - Number(el.dataset.yearsSince);
   });
 
-  /** Scroll top button */
-  let scrollTop = document.querySelector('.scroll-top');
+  /** Scroll top button: shown once the hero is mostly scrolled past */
+  const scrollTop = document.querySelector('.scroll-top');
   function toggleScrollTop() {
-    window.scrollY > 0 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+    scrollTop.classList.toggle('active', window.scrollY > window.innerHeight * 0.8);
   }
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: scrollBehavior
     });
   });
   window.addEventListener('load', toggleScrollTop);
@@ -57,6 +68,7 @@
   /** Init AOS.js */
   function aosInit() {
     AOS.init({
+      disable: reducedMotion,
       duration: 600,
       easing: 'ease-in-out',
       once: true,
@@ -67,7 +79,7 @@
 
   /** Init Typed.js */
   const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
+  if (selectTyped && !reducedMotion) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
     new Typed('.typed', {
@@ -89,7 +101,7 @@
           let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
             top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
+            behavior: scrollBehavior
           });
         }, 100);
       }
@@ -107,7 +119,11 @@
   function updateActiveNavLink() {
     const active = footerVisible ? sections[sections.length - 1] : sections.find(section => sectionsOnLine.has(section));
     if (!active) return;
-    navmenulinks.forEach(link => link.classList.toggle('active', link.hash === '#' + active.id));
+    navmenulinks.forEach(link => {
+      const isActive = link.hash === '#' + active.id;
+      link.classList.toggle('active', isActive);
+      isActive ? link.setAttribute('aria-current', 'location') : link.removeAttribute('aria-current');
+    });
   }
 
   /** Observe a 1px line 200px below the top of the viewport; the section crossing it is active. */

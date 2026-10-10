@@ -10,12 +10,12 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 
 | Section       | Content                                                                 |
 |---------------|-------------------------------------------------------------------------|
-| **Home**      | Hero with background image and Typed.js rotating headline               |
+| **Home**      | Name, Typed.js rotating role, one-line tagline and call-to-action buttons |
 | **About**     | Short bio and personal details                                          |
-| **Skills**    | Languages, frameworks, databases, tools and soft skills                 |
+| **Portfolio** | Project cards rendered from JS data, with older projects collapsible    |
 | **Resume**    | Summary, education and professional experience                          |
-| **Portfolio** | Professional and private project cards, rendered from JS data           |
-| **Contact**   | Location, email, LinkedIn and GitHub links                              |
+| **Skills**    | Technologies and areas of expertise, shown as tags                      |
+| **Contact**   | Email, LinkedIn and GitHub buttons, plus location                       |
 
 ## Project structure
 
@@ -45,8 +45,9 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
   - smooth scroll-to-top button
   - corrected scroll position when the page loads with a `#hash` in the URL
   - AOS (animate-on-scroll) and Typed.js initialization
-- **Portfolio (`projects.js`):** projects are defined in the `projectListJson` object, split into `professional` and `private`. On `DOMContentLoaded`, `projectsToHTML()` builds Bootstrap cards (title, tech stack, description, optional links with icons) into `#projects-container`.
+- **Portfolio (`projects.js`):** projects are defined in the `projectListJson` object, split into `professional` and `private`. On `DOMContentLoaded`, `projectsToHTML()` builds Bootstrap cards (title, tech stack, description, optional links with icons) into `#projects-container`. The `subtitle` is shown as technology tags, and projects with `"earlier": true` go into a collapsible "Earlier projects" section.
 - **Icons:** an inline SVG sprite at the top of `<body>` in `index.html` (Font Awesome Free 6 icons, CC BY 4.0). Use an icon with `<svg class="icon" aria-hidden="true"><use href="#i-NAME"></use></svg>`. To add one, copy its `<path>` from the Font Awesome Free SVGs into a new `<symbol id="i-NAME">`.
+- **Accessibility:** skip link, one `h1` and ordered headings, a closed mobile menu that can't be tabbed into (Escape closes it), visible keyboard focus, and the `prefers-reduced-motion` setting is respected (no scroll animations or typing effect).
 - **SEO:** the page includes a meta description, a canonical URL, Open Graph and Twitter Card tags, schema.org `Person` JSON-LD, `robots.txt` and `sitemap.xml`.
 - **Cache busting:** local CSS/JS are included with a `?v=YYMMDDx` query string. Bump it after changing those files.
 

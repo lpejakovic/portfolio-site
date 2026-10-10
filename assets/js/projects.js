@@ -69,22 +69,26 @@ const projectListJson = {
                     "icon": "globe",
                     "text": "Preview"
                 }
-            ]
+            ],
+            "earlier": true
         },
         {
             "title": "WandStat",
             "subtitle": "C#, ASP.NET MVC 4, EF4, MSSQL, Bootstrap, jQuery",
-            "description": "Web application dedicated for collecting telemetry data from users of proprietary ERP software system."
+            "description": "Web application dedicated for collecting telemetry data from users of proprietary ERP software system.",
+            "earlier": true
         },
         {
             "title": "4D WatchDog Service",
             "subtitle": "C#, .NET Framework 4.8",
-            "description": "Windows service responsible for monitoring application lifecycles, ensuring the continuous and scheduled execution of watched applications."
+            "description": "Windows service responsible for monitoring application lifecycles, ensuring the continuous and scheduled execution of watched applications.",
+            "earlier": true
         },
         {
             "title": "Fresh Service",
             "subtitle": "C#, ASP.NET Core 5, EF6, MSSQL, Bootstrap, jQuery",
-            "description": "Centralized web application with a primary focus on license verification and seamless distribution of updated versions of proprietary ERP software. Additionally, an internal document and data sharing service."
+            "description": "Centralized web application with a primary focus on license verification and seamless distribution of updated versions of proprietary ERP software. Additionally, an internal document and data sharing service.",
+            "earlier": true
         }
     ],
     "private": [
@@ -154,39 +158,56 @@ const projectListJson = {
     ]
 };
 
+function escapeHTML(text) {
+    return text.replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+}
+
+/** "C#, .NET MAUI (.NET 10), SQLite" -> ["C#", ".NET MAUI (.NET 10)", "SQLite"] */
+function techTags(subtitle) {
+    return subtitle.split(/,\s*(?![^()]*\))/).map(tag => `<li>${escapeHTML(tag)}</li>`).join('');
+}
+
 function projectCardHTML(project) {
     const links = (project.links || []).map(link => `
                                 <a href="${link.url}" target="_blank" rel="noopener" class="card-link">
                                     <svg class="icon" aria-hidden="true"><use href="#i-${link.icon}"></use></svg>
-                                    <span>${link.text}</span>
+                                    <span>${link.text}<span class="sr-only"> (${escapeHTML(project.title)})</span></span>
                                 </a>`).join('');
 
     return `
                     <div class="col-xl-4 col-lg-6">
-                        <div class="card">
+                        <article class="card">
                             <div class="card-header bg-transparent">
-                                <h5 class="card-title">${project.title}</h5>
-                                <small class="text-muted">${project.subtitle}</small>
+                                <h4 class="card-title">${escapeHTML(project.title)}</h4>
+                                <ul class="tags tags-small" aria-label="Technologies">${techTags(project.subtitle)}</ul>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">${project.description}</p>
-                            </div>
+                                <p class="card-text">${escapeHTML(project.description)}</p>
+                            </div>${links ? `
                             <div class="card-footer bg-transparent border-top-0">${links}
-                            </div>
-                        </div>
+                            </div>` : ''}
+                        </article>
                     </div>`;
 }
 
-function projectsToHTML() {
-    const sections = [
-        { title: 'Professional', projects: projectListJson.professional },
-        { title: 'Private', projects: projectListJson.private }
-    ];
+function projectGroupHTML(title, projects) {
+    const current = projects.filter(project => !project.earlier);
+    const earlier = projects.filter(project => project.earlier);
+    return `
+                <h3>${title}</h3>
+                <div class="row">${current.map(projectCardHTML).join('')}
+                </div>${earlier.length ? `
+                <details class="earlier-projects">
+                    <summary>Earlier projects (${earlier.length})</summary>
+                    <div class="row">${earlier.map(projectCardHTML).join('')}
+                    </div>
+                </details>` : ''}`;
+}
 
-    document.getElementById('projects-container').innerHTML = sections.map(section => `
-                <h3>${section.title}</h3>
-                <div class="row">${section.projects.map(projectCardHTML).join('')}
-                </div>`).join('');
+function projectsToHTML() {
+    document.getElementById('projects-container').innerHTML =
+        projectGroupHTML('Professional', projectListJson.professional) +
+        projectGroupHTML('Private', projectListJson.private);
 }
 
 document.addEventListener('DOMContentLoaded', projectsToHTML);
