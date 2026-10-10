@@ -7,7 +7,7 @@ const projectListJson = {
             "links": [
                 {
                     "url": "https://katalog06.4d.hr",
-                    "icon": "fa fa-globe",
+                    "icon": "globe",
                     "text": "Preview"
                 }
             ]
@@ -19,12 +19,12 @@ const projectListJson = {
             "links": [
                 {
                     "url": "https://play.google.com/store/apps/details?id=com.x4d.scanner",
-                    "icon": "fa fa-android",
+                    "icon": "android",
                     "text": "Android"
                 },
                 {
                     "url": "https://apps.apple.com/hr/app/4d-wand-imc/id1407622866",
-                    "icon": "fa fa-apple",
+                    "icon": "apple",
                     "text": "iOS"
                 }
             ]
@@ -51,12 +51,12 @@ const projectListJson = {
             "links": [
                 {
                     "url": "https://play.google.com/store/apps/details?id=com.x4d.loyalty",
-                    "icon": "fa fa-android",
+                    "icon": "android",
                     "text": "Android"
                 },
                 {
                     "url": "https://apps.apple.com/hr/app/4d-loyalty/id6472644910",
-                    "icon": "fa fa-apple",
+                    "icon": "apple",
                     "text": "iOS"
                 }
             ]
@@ -75,12 +75,12 @@ const projectListJson = {
             "links": [
                 {
                     "url": "https://luka-pejakovic.from.hr",
-                    "icon": "fa fa-globe",
+                    "icon": "globe",
                     "text": "Preview"
                 },
                 {
                     "url": "https://github.com/lpejakovic/portfolio-site",
-                    "icon": "fa fa-github",
+                    "icon": "github",
                     "text": "GitHub"
                 }
             ]
@@ -92,12 +92,12 @@ const projectListJson = {
             "links": [
                 {
                     "url": "https://bc.luka-pejakovic.from.hr",
-                    "icon": "fa fa-globe",
+                    "icon": "globe",
                     "text": "Preview"
                 },
                 {
                     "url": "https://github.com/lpejakovic/baby-calculator",
-                    "icon": "fa fa-github",
+                    "icon": "github",
                     "text": "GitHub"
                 }
             ]
@@ -109,7 +109,7 @@ const projectListJson = {
             "links": [
                 {
                     "url": "http://blog.luka-pejakovic.from.hr",
-                    "icon": "fa fa-globe",
+                    "icon": "globe",
                     "text": "Preview"
                 }
             ]
@@ -120,7 +120,7 @@ const projectListJson = {
 function projectCardHTML(project) {
     const links = (project.links || []).map(link => `
                                 <a href="${link.url}" target="_blank" rel="noopener" class="card-link">
-                                    <i class="${link.icon}"></i>
+                                    <svg class="icon" aria-hidden="true"><use href="#i-${link.icon}"></use></svg>
                                     <span>${link.text}</span>
                                 </a>`).join('');
 

@@ -42,6 +42,14 @@ body {
   font-family: var(--default-font);
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -191,8 +199,8 @@ h6 {
   width: 100%;
 }
 
-.navmenu a i,
-.navmenu a:focus i {
+.navmenu a .icon,
+.navmenu a:focus .icon {
   font-size: 20px;
   margin-right: 10px;
 }
@@ -203,9 +211,9 @@ h6 {
   color: var(--nav-hover-color);
 }
 
-.navmenu a:hover i,
-.navmenu .active i,
-.navmenu .active:focus i {
+.navmenu a:hover .icon,
+.navmenu .active .icon,
+.navmenu .active:focus .icon {
   color: var(--accent-color);
 }
 
@@ -235,10 +243,9 @@ h6 {
   transition: all 0.4s;
 }
 
-.scroll-top i {
+.scroll-top .icon {
   font-size: 24px;
   color: var(--contrast-color);
-  line-height: 0;
 }
 
 .scroll-top:hover {
@@ -371,12 +378,12 @@ section {
   margin-right: 10px;
 }
 
-.about .content ul i,
-.skills .container ul i {
-  font-size: 16px;
-  margin-right: 5px;
+.about .content ul .icon,
+.skills .container ul .icon {
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-right: 8px;
   color: var(--accent-color);
-  line-height: 0;
 }
 
 /* Resume Section */
@@ -398,7 +405,7 @@ section {
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 10px;
@@ -408,7 +415,7 @@ section {
   font-size: 16px;
   padding: 5px 15px;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -468,8 +475,9 @@ section {
   margin-bottom: 40px;
 }
 
-.contact .info-item i {
-  font-size: 20px;
+.contact .info-item .icon {
+  box-sizing: border-box;
+  padding: 12px;
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   width: 44px;
@@ -495,7 +503,7 @@ section {
   font-size: 14px;
 }
 
-.contact .info-item:hover i {
+.contact .info-item:hover .icon {
   background: var(--accent-color);
   color: var(--contrast-color);
 }

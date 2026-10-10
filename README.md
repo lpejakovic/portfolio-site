@@ -42,8 +42,9 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
   - smooth scroll-to-top button
   - corrected scroll position when the page loads with a `#hash` in the URL
   - AOS (animate-on-scroll) and Typed.js initialization
-- **Portfolio (`projects.js`):** projects are defined in the `projectListJson` object, split into `professional` and `private`. On `DOMContentLoaded`, `projectsToHTML()` builds Bootstrap cards (title, tech stack, description, optional links with Font Awesome icons) into `#projects-container`.
-- **SEO:** the page includes a meta description and keywords, a canonical URL, Open Graph and Twitter Card tags, schema.org `Person` JSON-LD, `robots.txt` and `sitemap.xml`.
+- **Portfolio (`projects.js`):** projects are defined in the `projectListJson` object, split into `professional` and `private`. On `DOMContentLoaded`, `projectsToHTML()` builds Bootstrap cards (title, tech stack, description, optional links with icons) into `#projects-container`.
+- **Icons:** an inline SVG sprite at the top of `<body>` in `index.html` (Font Awesome Free 6 icons, CC BY 4.0). Use an icon with `<svg class="icon" aria-hidden="true"><use href="#i-NAME"></use></svg>`. To add one, copy its `<path>` from the Font Awesome Free SVGs into a new `<symbol id="i-NAME">`.
+- **SEO:** the page includes a meta description, a canonical URL, Open Graph and Twitter Card tags, schema.org `Person` JSON-LD, `robots.txt` and `sitemap.xml`.
 - **Cache busting:** local CSS/JS are included with a `?v=YYMMDDx` query string. Bump it after changing those files.
 
 ### Third-party dependencies (via CDN)
@@ -51,7 +52,6 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 | Library        | Version | Purpose                          |
 |----------------|---------|----------------------------------|
 | Bootstrap      | 5.3.3   | Grid, components, utilities      |
-| Font Awesome   | 4.7.0   | Icons                            |
 | AOS            | 2.3.1   | Scroll animations                |
 | Typed.js       | 2.1.0   | Typing effect in the hero        |
 | Google Fonts   | –       | Roboto, Raleway, Poppins         |
@@ -79,7 +79,7 @@ python3 -m http.server 8000
       "title": "Project name",
       "subtitle": "Tech, stack, list",
       "description": "Short description.",
-      "links": [ { "url": "https://...", "icon": "fa fa-github", "text": "GitHub" } ] // optional
+      "links": [ { "url": "https://...", "icon": "github", "text": "GitHub" } ] // optional; icon = sprite id without "i-"
   }
   ```
 - **Other sections** (about, skills, resume, contact) are static markup in `index.html`.

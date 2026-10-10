@@ -6,9 +6,9 @@
 
    function headerToggle() {
      document.querySelector('#header').classList.toggle('header-show');
-     headerToggleBtn.classList.toggle('fa-bars');
-     headerToggleBtn.classList.toggle('fa-times');
-     headerToggleBtn.setAttribute('aria-expanded', document.querySelector('#header').classList.contains('header-show'));
+     const isOpen = document.querySelector('#header').classList.contains('header-show');
+     headerToggleBtn.querySelector('use').setAttribute('href', isOpen ? '#i-times' : '#i-bars');
+     headerToggleBtn.setAttribute('aria-expanded', isOpen);
    }
    headerToggleBtn.addEventListener('click', headerToggle);
  
@@ -51,7 +51,7 @@
     });
   });
   window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  document.addEventListener('scroll', toggleScrollTop, { passive: true });
 
   /** Init AOS.js */
   function aosInit() {
@@ -95,22 +95,39 @@
   });
 
   /**  Navmenu Scrollspy */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+  const navmenulinks = document.querySelectorAll('.navmenu a[href^="#"]');
+  const sections = Array.from(navmenulinks, link => document.querySelector(link.hash)).filter(Boolean);
+  const sectionsOnLine = new Set();
+  let footerVisible = false;
+  let scrollspyObserver;
 
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
+  /** The last section can't scroll up to the line, so it is active while the footer is (almost) fully visible. */
+  function updateActiveNavLink() {
+    const active = footerVisible ? sections[sections.length - 1] : sections.find(section => sectionsOnLine.has(section));
+    if (!active) return;
+    navmenulinks.forEach(link => link.classList.toggle('active', link.hash === '#' + active.id));
   }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
+
+  /** Observe a 1px line 200px below the top of the viewport; the section crossing it is active. */
+  function navmenuScrollspy() {
+    if (scrollspyObserver) scrollspyObserver.disconnect();
+    sectionsOnLine.clear();
+    scrollspyObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting ? sectionsOnLine.add(entry.target) : sectionsOnLine.delete(entry.target));
+      updateActiveNavLink();
+    }, {
+      rootMargin: `-200px 0px -${Math.max(window.innerHeight - 201, 0)}px 0px`
+    });
+    sections.forEach(section => scrollspyObserver.observe(section));
+  }
+  navmenuScrollspy();
+  window.addEventListener('resize', navmenuScrollspy);
+
+  const footer = document.querySelector('#footer');
+  if (footer && sections.length) {
+    new IntersectionObserver(entries => {
+      footerVisible = entries[0].isIntersecting;
+      updateActiveNavLink();
+    }, { threshold: 0.9 }).observe(footer);
+  }
 })();

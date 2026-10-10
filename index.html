@@ -38,10 +38,9 @@
   <!-- 3rd party CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css?v=2610101" />
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css?v=2610105" />
 
   <!-- Schema.org Markup for Organization -->
   <script type="application/ld+json">
@@ -69,8 +68,30 @@
 </head>
 
 <body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <!-- Icons: Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0) -->
+    <symbol id="i-home" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></symbol>
+    <symbol id="i-file-text" viewBox="0 0 384 512"><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z"/></symbol>
+    <symbol id="i-file-code" viewBox="0 0 384 512"><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm97 289c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L79 303c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-31-31 31-31zM257 255c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l31 31-31 31c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9l-48-48z"/></symbol>
+    <symbol id="i-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></symbol>
+    <symbol id="i-times" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></symbol>
+    <symbol id="i-map-marker" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></symbol>
+    <symbol id="i-android" viewBox="0 0 576 512"><path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></symbol>
+  </svg>
   <header id="header" class="header dark-background d-flex flex-column">
-    <button type="button" class="header-toggle d-xl-none fa fa-bars" aria-label="Toggle navigation" aria-controls="header" aria-expanded="false"></button>
+    <button type="button" class="header-toggle d-xl-none" aria-label="Toggle navigation" aria-controls="header" aria-expanded="false">
+      <svg class="icon" aria-hidden="true"><use href="#i-bars"></use></svg>
+    </button>
     <div class="profile-img">
       <img src="assets/img/profile-img.jpg" alt="Profile image" width="256" height="256" class="img-fluid rounded-circle" />
     </div>
@@ -85,50 +106,50 @@
         -->
     <div class="social-links text-center">
       <a href="https://www.fb.com/lpejakovic" target="_blank" class="facebook" aria-label="Facebook">
-        <i class="fa fa-facebook"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
       </a>
       <a href="https://www.linkedin.com/in/pejakovic-luka" target="_blank" class="linkedin" aria-label="LinkedIn">
-        <i class="fa fa-linkedin"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
       </a>
       <a href="https://github.com/lpejakovic" target="_blank" class="github" aria-label="GitHub">
-        <i class="fa fa-github"></i>
+        <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
       </a>
     </div>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li>
           <a href="#home" class="active">
-            <i class="fa fa-home"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>
             Home
           </a>
         </li>
         <li>
           <a href="#about">
-            <i class="fa fa-user"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg>
             About
           </a>
         </li>
         <li>
           <a href="#skills">
-            <i class="fa fa-code"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>
             Skills
           </a>
         </li>
         <li>
           <a href="#resume">
-            <i class="fa fa-file-text-o"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg>
             Resume
           </a>
         </li>
         <li>
           <a href="#portfolio">
-            <i class="fa fa-file-code-o"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-file-code"></use></svg>
             Portfolio
           </a>
         </li>
         <li>
           <a href="#contact">
-            <i class="fa fa-envelope"></i>
+            <svg class="icon" aria-hidden="true"><use href="#i-envelope"></use></svg>
             Contact
           </a>
         </li>
@@ -173,16 +194,16 @@
               <div class="col-lg-6">
                 <ul>
                   <li>
-                    <i class="fa fa-chevron-right"></i>
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>Date of birth:</strong> <span>14.09.1991</span>
                   </li>
                   <li>
-                    <i class="fa fa-chevron-right"></i>
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>Place of birth:</strong>
                     <span>Rijeka, Croatia</span>
                   </li>
                   <li>
-                    <i class="fa fa-chevron-right"></i>
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>Website:</strong>
                     <span>luka-pejakovic.from.hr</span>
                   </li>
@@ -191,15 +212,15 @@
               <div class="col-lg-6">
                 <ul>
                   <li>
-                    <i class="fa fa-chevron-right"></i> <strong>Age:</strong>
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg> <strong>Age:</strong>
                     <span id="age" data-birth-date="1991-09-14">35</span>
                   </li>
                   <li>
-                    <i class="fa fa-chevron-right"></i>
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>Degree:</strong> <span>Master</span>
                   </li>
                   <li>
-                    <i class="fa fa-chevron-right"></i>
+                    <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
                     <strong>Email:</strong>
                     <span>luka.pejakovic@gmail.com</span>
                   </li>
@@ -229,27 +250,27 @@
           <h4>Technical Skills:</h4>
           <ul class="list-unstyled">
             <li>
-              <i class="fa fa-chevron-right"></i>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
               <strong>Programming Languages:</strong>
               <span>C#, JavaScript, HTML, CSS, PHP, Python</span>
             </li>
             <li>
-              <i class="fa fa-chevron-right"></i>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
               <strong>Frameworks and Libraries:</strong>
               <span>ASP.NET MVC, Bootstrap, jQuery, .NET Core, WordPress, Flask, Xamarin.Forms, .NET MAUI</span>
             </li>
             <li>
-              <i class="fa fa-chevron-right"></i>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
               <strong>Databases:</strong>
               <span> MSSQL, SQLite, MySQL</span>
             </li>
             <li>
-              <i class="fa fa-chevron-right"></i>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
               <strong>Cloud Services:</strong>
               <span>AWS, DigitalOcean</span>
             </li>
             <li>
-              <i class="fa fa-chevron-right"></i>
+              <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
               <strong>Version Control:</strong>
               <span>SVN, Git</span>
             </li>
@@ -261,22 +282,22 @@
             <h4>Soft Skills:</h4>
             <ul class="list-unstyled">
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Problem Solving</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Problem Solving</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Strong Communication</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Strong Communication</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Troubleshooting</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Troubleshooting</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Team Collaboration</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Team Collaboration</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Adaptability</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Adaptability</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Time Management</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Time Management</strong>
               </li>
             </ul>
           </div>
@@ -285,25 +306,25 @@
             <h4>Areas of Expertise:</h4>
             <ul class="list-unstyled">
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Software Design and Architecture</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Software Design and Architecture</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Database Modeling</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Database Modeling</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>API Development</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>API Development</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Full Stack Development</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Full Stack Development</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Mobile Development</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Mobile Development</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>DevOps</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>DevOps</strong>
               </li>
               <li>
-                <i class="fa fa-chevron-right"></i><strong>Testing and QA</strong>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg><strong>Testing and QA</strong>
               </li>
             </ul>
           </div>
@@ -382,14 +403,14 @@
           <div class="col-lg-6">
             <div class="info-wrap">
               <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="200">
-                <i class="fa fa-map-marker flex-shrink-0"></i>
+                <svg class="icon flex-shrink-0" aria-hidden="true"><use href="#i-map-marker"></use></svg>
                 <div>
                   <h3>Current Location</h3>
                   <p>Zagreb, Croatia</p>
                 </div>
               </div>
               <div class="info-item d-flex aos-init" data-aos="fade-up" data-aos-delay="300">
-                <i class="fa fa-envelope flex-shrink-0"></i>
+                <svg class="icon flex-shrink-0" aria-hidden="true"><use href="#i-envelope"></use></svg>
                 <div>
                   <h3>Email</h3>
                   <p>luka.pejakovic@gmail.com</p>
@@ -405,18 +426,18 @@
     <div class="container">
       <div class="text-center">
         <p>Luka Pejaković</p>
-        <p><i class="fa fa-copyright me-1"></i><span id="copyright-year">2026</span>.</p>
+        <p>&copy; <span id="copyright-year">2026</span>.</p>
       </div>
     </div>
   </footer>
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="fa fa-chevron-up mb-1"></i>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top">
+    <svg class="icon mb-1" aria-hidden="true"><use href="#i-chevron-up"></use></svg>
   </a>
   <!-- JS files -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/projects.js?v=2610101"></script>
-  <script src="assets/js/main.js?v=2610101"></script>
+  <script src="assets/js/projects.js?v=2610105"></script>
+  <script src="assets/js/main.js?v=2610105"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       projectsToHTML();
