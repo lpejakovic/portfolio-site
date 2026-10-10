@@ -30,7 +30,8 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 │   │   ├── main.js       # UI behavior: nav toggle, scrollspy, scroll-to-top, AOS & Typed init
 │   │   └── projects.js   # Portfolio data (projectListJson) + projectsToHTML() renderer
 │   ├── fonts/            # Roboto, Raleway, Poppins (woff2, latin + latin-ext subsets)
-│   └── img/              # Favicon, profile photo, hero background (webp)
+│   ├── img/              # Favicon, profile photo, hero background (webp)
+│   └── vendor/           # Third-party libraries: Bootstrap CSS, AOS, Typed.js
 ├── robots.txt            # Allows all crawlers, points to sitemap
 └── sitemap.xml           # Single-URL sitemap
 ```
@@ -49,7 +50,7 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 - **SEO:** the page includes a meta description, a canonical URL, Open Graph and Twitter Card tags, schema.org `Person` JSON-LD, `robots.txt` and `sitemap.xml`.
 - **Cache busting:** local CSS/JS are included with a `?v=YYMMDDx` query string. Bump it after changing those files.
 
-### Third-party dependencies (via CDN)
+### Third-party dependencies (self-hosted in `assets/vendor/`, all MIT licensed)
 
 | Library        | Version | Purpose                          |
 |----------------|---------|----------------------------------|
@@ -65,7 +66,7 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 
 ## Running locally
 
-Serve the folder with any static file server. Because the libraries come from CDNs, you need an internet connection.
+Serve the folder with any static file server. Everything is self-hosted, so it works offline.
 
 ```bash
 python3 -m http.server 8000
