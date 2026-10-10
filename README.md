@@ -32,8 +32,6 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 │   ├── fonts/            # Roboto, Raleway, Poppins (woff2, latin + latin-ext subsets)
 │   ├── img/              # Favicon, profile photo, hero background (webp)
 │   └── vendor/           # Third-party libraries: Bootstrap CSS (full + trimmed), AOS, Typed.js
-├── tools/
-│   └── trim-bootstrap.py # Regenerates assets/vendor/bootstrap.trimmed.css
 ├── robots.txt            # Allows all crawlers, points to sitemap
 └── sitemap.xml           # Single-URL sitemap
 ```
@@ -54,7 +52,7 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 
 ### Third-party dependencies (self-hosted in `assets/vendor/`, all MIT licensed)
 
-The page loads `bootstrap.trimmed.css`: only the Bootstrap rules this page uses (about 10 KB instead of 233 KB), copied verbatim from `bootstrap.min.css`. If you add Bootstrap classes that aren't styled yet, either point the `<link>` in `index.html` back at `bootstrap.min.css` (kept in the folder for this) or regenerate the trimmed file with `tools/trim-bootstrap.py` (setup instructions are at the top of the script) and bump its `?v=`.
+The page loads `bootstrap.trimmed.css`: only the Bootstrap rules this page uses (about 10 KB instead of 233 KB), copied verbatim from `bootstrap.min.css`. If you add Bootstrap classes that aren't styled yet, point the `<link>` in `index.html` back at `bootstrap.min.css` (kept in the folder for this).
 
 | Library        | Version | Purpose                          |
 |----------------|---------|----------------------------------|
