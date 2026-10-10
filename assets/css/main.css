@@ -92,11 +92,6 @@ h6 {
   margin-bottom: 15px;
 }
 
-.header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
-}
-
 .header .logo h1 {
   font-size: 24px;
   margin: 0;
@@ -154,6 +149,8 @@ h6 {
   justify-content: center;
   width: 40px;
   height: 40px;
+  border: none;
+  padding: 0;
   border-radius: 50%;
   cursor: pointer;
   position: fixed;
@@ -169,10 +166,6 @@ h6 {
 }
 
 /* Navigation Menu */
-.mobile-nav-toggle {
-  display: none;
-}
-
 .navmenu {
   padding: 0;
   z-index: 9997;
@@ -345,23 +338,6 @@ section {
   background-color: var(--visibility-color);
 }
 
-.home .social-links {
-  margin-top: 25px;
-}
-
-.home .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
-.home .social-links a:hover {
-  color: var(--accent-color);
-}
-
 @media (max-width: 768px) {
   .home h2 {
     font-size: 32px;
@@ -527,6 +503,6 @@ section {
 /* Disable aos animation delay for mobile devices */
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+    transition-delay: 0s !important;
   }
 }

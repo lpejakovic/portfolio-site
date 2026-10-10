@@ -117,75 +117,37 @@ const projectListJson = {
     ]
 };
 
+function projectCardHTML(project) {
+    const links = (project.links || []).map(link => `
+                                <a href="${link.url}" target="_blank" rel="noopener" class="card-link">
+                                    <i class="${link.icon}"></i>
+                                    <span>${link.text}</span>
+                                </a>`).join('');
+
+    return `
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-transparent">
+                                <h5 class="card-title">${project.title}</h5>
+                                <small class="text-muted">${project.subtitle}</small>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">${project.description}</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">${links}
+                            </div>
+                        </div>
+                    </div>`;
+}
+
 function projectsToHTML() {
-    const projectsContainer = document.getElementById('projects-container');
-    projectsContainer.innerHTML += '<h3>Professional</h3>';
-    projectsContainer.innerHTML += '<div class="row" id="professional-projects-row">';
+    const sections = [
+        { title: 'Professional', projects: projectListJson.professional },
+        { title: 'Private', projects: projectListJson.private }
+    ];
 
-    const professionalRow = document.getElementById('professional-projects-row');
-    projectListJson.professional.forEach(function (project) {
-        let projectHtml = `
-                    <div class="col-xl-4 col-lg-6">
-                        <div class="card">
-                            <div class="card-header bg-transparent">
-                                <h5 class="card-title">${project.title}</h5>
-                                <small class="text-muted">${project.subtitle}</small>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">${project.description}</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-top-0">`;
-
-        if (project.links) {
-            project.links.forEach(function (link) {
-                projectHtml += `
-                                <a href="${link.url}" target="_blank" class="card-link">
-                                    <i class="${link.icon}"></i>
-                                    <span>${link.text}</span>
-                                </a>`;
-            });
-        }
-
-        projectHtml += `
-                            </div>
-                        </div>
-                    </div>`;
-
-        professionalRow.innerHTML += projectHtml;
-    });
-    projectsContainer.innerHTML += '</div>';
-
-    projectsContainer.innerHTML += '<h3>Private</h3>';
-    projectsContainer.innerHTML += '<div class="row" id="private-projects-row">';
-
-    const privateRow = document.getElementById('private-projects-row');
-    projectListJson.private.forEach(function (project) {
-        let projectHtml = `
-                    <div class="col-xl-4 col-lg-6">
-                        <div class="card">
-                            <div class="card-header bg-transparent">
-                                <h5 class="card-title">${project.title}</h5>
-                                <small class="text-muted">${project.subtitle}</small>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">${project.description}</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-top-0">`;
-        if (project.links) {
-            project.links.forEach(function (link) {
-                projectHtml += `
-                                <a href="${link.url}" target="_blank" class="card-link">
-                                    <i class="${link.icon}"></i>
-                                    <span>${link.text}</span>
-                                </a>`;
-            });
-        }
-        projectHtml += `
-                            </div>
-                        </div>
-                    </div>`;
-
-        privateRow.innerHTML += projectHtml;
-    });
-    projectsContainer.innerHTML += '</div>';
+    document.getElementById('projects-container').innerHTML = sections.map(section => `
+                <h3>${section.title}</h3>
+                <div class="row">${section.projects.map(projectCardHTML).join('')}
+                </div>`).join('');
 }

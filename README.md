@@ -24,12 +24,10 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 ├── index.html            # Whole page: markup, SEO/meta tags, JSON-LD, script includes
 ├── assets/
 │   ├── css/
-│   │   ├── main.css      # Custom styles (CSS variables, layout, responsive breakpoints)
-│   │   └── aos.css       # Local copy of AOS styles (currently unused, loaded from CDN)
+│   │   └── main.css      # Custom styles (CSS variables, layout, responsive breakpoints)
 │   ├── js/
 │   │   ├── main.js       # UI behavior: nav toggle, scrollspy, scroll-to-top, AOS & Typed init
-│   │   ├── projects.js   # Portfolio data (projectListJson) + projectsToHTML() renderer
-│   │   └── aos.js        # Local copy of AOS library (currently unused, loaded from CDN)
+│   │   └── projects.js   # Portfolio data (projectListJson) + projectsToHTML() renderer
 │   └── img/              # Favicon, profile photo, hero background (webp)
 ├── robots.txt            # Allows all crawlers, points to sitemap
 └── sitemap.xml           # Single-URL sitemap

@@ -8,6 +8,7 @@
      document.querySelector('#header').classList.toggle('header-show');
      headerToggleBtn.classList.toggle('fa-bars');
      headerToggleBtn.classList.toggle('fa-times');
+     headerToggleBtn.setAttribute('aria-expanded', document.querySelector('#header').classList.contains('header-show'));
    }
    headerToggleBtn.addEventListener('click', headerToggle);
  
@@ -21,12 +22,26 @@
  
    });
 
+  /** Age and copyright year */
+  const ageEl = document.querySelector('#age');
+  if (ageEl) {
+    const [birthYear, birthMonth, birthDay] = ageEl.dataset.birthDate.split('-').map(Number);
+    const today = new Date();
+    let age = today.getFullYear() - birthYear;
+    if (today < new Date(today.getFullYear(), birthMonth - 1, birthDay)) {
+      age--;
+    }
+    ageEl.textContent = age;
+  }
+  const yearEl = document.querySelector('#copyright-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
   /** Scroll top button */
   let scrollTop = document.querySelector('.scroll-top');
   function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 0 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
+    window.scrollY > 0 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
   }
   scrollTop.addEventListener('click', (e) => {
     e.preventDefault();
