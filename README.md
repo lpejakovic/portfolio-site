@@ -24,10 +24,12 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 ├── index.html            # Whole page: markup, SEO/meta tags, JSON-LD, script includes
 ├── assets/
 │   ├── css/
+│   │   ├── fonts.css     # @font-face rules for the self-hosted fonts
 │   │   └── main.css      # Custom styles (CSS variables, layout, responsive breakpoints)
 │   ├── js/
 │   │   ├── main.js       # UI behavior: nav toggle, scrollspy, scroll-to-top, AOS & Typed init
 │   │   └── projects.js   # Portfolio data (projectListJson) + projectsToHTML() renderer
+│   ├── fonts/            # Roboto, Raleway, Poppins (woff2, latin + latin-ext subsets)
 │   └── img/              # Favicon, profile photo, hero background (webp)
 ├── robots.txt            # Allows all crawlers, points to sitemap
 └── sitemap.xml           # Single-URL sitemap
@@ -35,7 +37,7 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 
 ## How it works
 
-- **Styling:** Bootstrap 5.3 grid and utilities plus `main.css`. Theme colors live in CSS custom properties on `:root`. The `.light-background` and `.dark-background` classes switch the palette per section. Fonts are Roboto (body), Raleway (headings) and Poppins (nav), all from Google Fonts.
+- **Styling:** Bootstrap 5.3 grid and utilities plus `main.css`. Theme colors live in CSS custom properties on `:root`. The `.light-background` and `.dark-background` classes switch the palette per section. Fonts are Roboto (body), Raleway (headings) and Poppins (nav). They are self-hosted from `assets/fonts/` instead of loaded from Google, so visitors' IP addresses aren't sent to Google (a GDPR concern).
 - **Interactivity (`main.js`):**
   - mobile header toggle that closes when a nav link is clicked
   - scrollspy that highlights the active nav item
@@ -54,7 +56,6 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 | Bootstrap      | 5.3.3   | Grid, components, utilities      |
 | AOS            | 2.3.1   | Scroll animations                |
 | Typed.js       | 2.1.0   | Typing effect in the hero        |
-| Google Fonts   | –       | Roboto, Raleway, Poppins         |
 
 ## Featured projects
 
