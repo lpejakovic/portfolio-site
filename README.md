@@ -30,8 +30,8 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 │   │   ├── main.js       # UI behavior: nav toggle, scrollspy, scroll-to-top, AOS & Typed init
 │   │   └── projects.js   # Portfolio data (projectListJson) + projectsToHTML() renderer
 │   ├── fonts/            # Roboto, Raleway, Poppins (woff2, latin + latin-ext subsets)
-│   ├── img/              # Favicon, profile photo, hero background (webp)
-│   └── vendor/           # Third-party libraries: Bootstrap CSS (full + trimmed), AOS, Typed.js
+│   ├── img/              # Favicon, profile placeholder, hero background (webp), link-preview image
+│   └── vendor/           # Third-party libraries: Bootstrap CSS (trimmed), AOS, Typed.js
 ├── robots.txt            # Allows all crawlers, points to sitemap
 └── sitemap.xml           # Single-URL sitemap
 ```
@@ -52,7 +52,7 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 
 ### Third-party dependencies (self-hosted in `assets/vendor/`, all MIT licensed)
 
-The page loads `bootstrap.trimmed.css`: only the Bootstrap rules this page uses (about 10 KB instead of 233 KB), copied verbatim from `bootstrap.min.css`. If you add Bootstrap classes that aren't styled yet, point the `<link>` in `index.html` back at `bootstrap.min.css` (kept in the folder for this).
+The page loads `bootstrap.trimmed.css`: only the Bootstrap rules this page uses (about 10 KB instead of 233 KB), copied verbatim from Bootstrap 5.3.3. If you add Bootstrap classes that aren't styled yet, put the full build back in `assets/vendor/` (`git show 8830f81:assets/vendor/bootstrap.min.css > assets/vendor/bootstrap.min.css`, or download it from `https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css`) and point the `<link>` in `index.html` at it. Loading it straight from the CDN won't work: the Content-Security-Policy only allows files from this domain.
 
 | Library        | Version | Purpose                          |
 |----------------|---------|----------------------------------|
