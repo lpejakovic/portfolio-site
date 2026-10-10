@@ -22,17 +22,14 @@
  
    });
 
-  /** Age and copyright year */
-  const ageEl = document.querySelector('#age');
-  if (ageEl) {
-    const [birthYear, birthMonth, birthDay] = ageEl.dataset.birthDate.split('-').map(Number);
-    const today = new Date();
-    let age = today.getFullYear() - birthYear;
-    if (today < new Date(today.getFullYear(), birthMonth - 1, birthDay)) {
-      age--;
-    }
-    ageEl.textContent = age;
-  }
+  /** Email links are assembled here so the address isn't in the HTML for scrapers. */
+  document.querySelectorAll('[data-email-user]').forEach(link => {
+    const email = `${link.dataset.emailUser}@${link.dataset.emailDomain}`;
+    link.href = `mailto:${email}`;
+    if (link.hasAttribute('data-email-show')) link.textContent = email;
+  });
+
+  /** Copyright year */
   const yearEl = document.querySelector('#copyright-year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
