@@ -151,3 +151,5 @@ function projectsToHTML() {
                 <div class="row">${section.projects.map(projectCardHTML).join('')}
                 </div>`).join('');
 }
+
+document.addEventListener('DOMContentLoaded', projectsToHTML);

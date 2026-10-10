@@ -355,6 +355,17 @@ section {
   }
 }
 
+/* Typed.js cursor (autoInsertCss is off for the CSP) */
+.typed-cursor.typed-cursor--blink {
+  animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /* About Section */
 .about .content h2 {
   font-weight: 700;

@@ -71,7 +71,8 @@
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 2000,
+      autoInsertCss: false // cursor CSS lives in main.css so the CSP can forbid inline styles
     });
   }
 
