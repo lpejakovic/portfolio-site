@@ -72,7 +72,7 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <button type="button" class="header-toggle d-xl-none fa fa-bars" aria-label="Toggle navigation" aria-controls="header" aria-expanded="false"></button>
     <div class="profile-img">
-      <img src="assets/img/profile-img.jpg" alt="Profile image" class="img-fluid rounded-circle" />
+      <img src="assets/img/profile-img.jpg" alt="Profile image" width="256" height="256" class="img-fluid rounded-circle" />
     </div>
     <a href="/" class="logo d-flex align-items-center justify-content-center">
       <h1 id="name">Luka Pejaković</h1>
@@ -138,7 +138,10 @@
   <main class="main">
     <!-- HOME -->
     <section id="home" class="home section dark-background">
-      <img src="assets/img/home-background.webp" alt="Home background image" data-aos="fade-in" class="aos-init" />
+      <img src="assets/img/home-background-1792.webp"
+        srcset="assets/img/home-background-768.webp 768w, assets/img/home-background-1280.webp 1280w, assets/img/home-background-1792.webp 1792w"
+        sizes="(min-width: 1200px) calc(100vw - 300px), (orientation: portrait) 175vh, 100vw"
+        width="1792" height="1024" fetchpriority="high" alt="Home background image" />
       <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
         <h2>Luka Pejaković</h2>
         <p>
@@ -161,7 +164,7 @@
       <div class="container aos-init" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Full sized profile image" />
+            <img src="assets/img/profile-img.jpg" width="256" height="256" class="img-fluid" alt="Full sized profile image" />
           </div>
           <div class="col-lg-8 content">
             <h2>Software Engineer and Developer</h2>
