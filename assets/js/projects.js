@@ -1,21 +1,14 @@
 const projectListJson = {
     "professional": [
         {
-            "title": "4D Wand IMC - web shop",
-            "subtitle": "C#, ASP.NET MVC 4, EF4, MSSQL, Bootstrap, jQuery",
-            "description": "Universal web shop application that seamlessly synchronizes data with a proprietary ERP software system.",
-            "links": [
-                {
-                    "url": "https://katalog06.4d.hr",
-                    "icon": "globe",
-                    "text": "Preview"
-                }
-            ]
+            "title": "4D Web Shop",
+            "subtitle": "PHP, WordPress, WooCommerce, JavaScript, SCSS",
+            "description": "E-commerce platform built as a WordPress/WooCommerce plugin and theme, synchronized with the 4D Wand ERP: live stock and pricing, B2B price lists, advanced shipping rules, payment integrations, CSV import/export and a form builder. I lead the team developing it, own the architecture, review the team's pull requests and write a large share of the code."
         },
         {
             "title": "4D Wand IMC - mobile application",
-            "subtitle": "C#, Xamarin.Forms, SQLite, Android, iOS",
-            "description": "Cross-platform mobile application that allows users to manage commercial and warehouse documents, analyze financial data and access detailed product information.",
+            "subtitle": "C#, .NET MAUI (.NET 10), SQLite, Android, iOS",
+            "description": "Cross-platform mobile app for inventory, order picking, point of sale, returns and barcode scanning, with offline storage and biometric login. Led its migration from Xamarin.Forms to .NET MAUI, including support for dedicated hardware scanners.",
             "links": [
                 {
                     "url": "https://play.google.com/store/apps/details?id=com.x4d.scanner",
@@ -26,6 +19,55 @@ const projectListJson = {
                     "url": "https://apps.apple.com/hr/app/4d-wand-imc/id1407622866",
                     "icon": "apple",
                     "text": "iOS"
+                }
+            ]
+        },
+        {
+            "title": "Document exchange platform",
+            "subtitle": ".NET MAUI, Rust, Axum, SQL",
+            "description": "Platform for sending documents to a company, organized into cases: a .NET MAUI mobile app with QR-code onboarding, PIN and biometric protection, backed by a Rust REST API. Led the planning and architecture."
+        },
+        {
+            "title": "WebSocket Service",
+            "subtitle": "C#, .NET 8 (Native AOT), Minimal API, xUnit",
+            "description": "Gateway that turns REST requests into WebSocket messages, connecting web and mobile clients to the ERP. Persistent connections with automatic reconnects, health checks, request validation and a host allow-list, published as a native Linux binary."
+        },
+        {
+            "title": "Real-time messaging server",
+            "subtitle": "Rust, Tokio, Axum, WebSockets",
+            "description": "WebSocket server with group and channel subscriptions, secure WSS with automatic certificate reload and graceful shutdown. Contributed performance improvements to message delivery and the deployment setup."
+        },
+        {
+            "title": "Release notes service",
+            "subtitle": "PHP, WordPress, REST API",
+            "description": "WordPress plugin that stores product version histories in dedicated database tables and publishes release notes and latest versions through a REST API, with an admin interface for managing them."
+        },
+        {
+            "title": "4D Loyalty",
+            "subtitle": "C#, .NET MAUI (.NET 10), SQLite, Android, iOS",
+            "description": "Cross-platform mobile app for storing and quickly accessing loyalty program cards or any other barcodes, available offline.",
+            "links": [
+                {
+                    "url": "https://play.google.com/store/apps/details?id=com.x4d.loyalty",
+                    "icon": "android",
+                    "text": "Android"
+                },
+                {
+                    "url": "https://apps.apple.com/hr/app/4d-loyalty/id6472644910",
+                    "icon": "apple",
+                    "text": "iOS"
+                }
+            ]
+        },
+        {
+            "title": "4D Wand IMC - web shop",
+            "subtitle": "C#, ASP.NET MVC 4, EF4, MSSQL, Bootstrap, jQuery",
+            "description": "Universal web shop application that seamlessly synchronizes data with a proprietary ERP software system.",
+            "links": [
+                {
+                    "url": "https://katalog06.4d.hr",
+                    "icon": "globe",
+                    "text": "Preview"
                 }
             ]
         },
@@ -43,35 +85,25 @@ const projectListJson = {
             "title": "Fresh Service",
             "subtitle": "C#, ASP.NET Core 5, EF6, MSSQL, Bootstrap, jQuery",
             "description": "Centralized web application with a primary focus on license verification and seamless distribution of updated versions of proprietary ERP software. Additionally, an internal document and data sharing service."
-        },
-        {
-            "title": "4D Loyalty",
-            "subtitle": "C#, .NET MAUI, SQLite, Android, iOS",
-            "description": "4D Loyalty is a cross-platform mobile application that allows user to store and access loyalty program cards or any other barcode inputs.",
-            "links": [
-                {
-                    "url": "https://play.google.com/store/apps/details?id=com.x4d.loyalty",
-                    "icon": "android",
-                    "text": "Android"
-                },
-                {
-                    "url": "https://apps.apple.com/hr/app/4d-loyalty/id6472644910",
-                    "icon": "apple",
-                    "text": "iOS"
-                }
-            ]
-        },
-        {
-            "title": "WebSocket Service",
-            "subtitle": "C#, .NET 8, Websocket.Client",
-            "description": "Minimal API web service that translates a REST request to Websocket message and communicates to predefined endpoints."
         }
     ],
     "private": [
         {
+            "title": "Battleship multiplayer",
+            "subtitle": "C#, ASP.NET Core, SignalR, Vue 3, SQLite",
+            "description": "Real-time online multiplayer Battleship with several game modes (classic, rapid and blitz with increment), server-side game state that prevents cheating, a mobile-friendly interface, automated tests and CI, self-hosted behind Nginx.",
+            "links": [
+                {
+                    "url": "https://battleship.luka-pejakovic.from.hr",
+                    "icon": "globe",
+                    "text": "Play"
+                }
+            ]
+        },
+        {
             "title": "Personal portfolio page",
-            "subtitle": "HTML, CSS, JS",
-            "description": "Simple single-page website, that demonstrates basic skills of frontend website development.",
+            "subtitle": "HTML, CSS, JavaScript",
+            "description": "This single-page portfolio, built without frameworks: self-hosted fonts and libraries, inline SVG icons, a strict Content-Security-Policy and no third-party requests.",
             "links": [
                 {
                     "url": "https://luka-pejakovic.from.hr",
@@ -84,6 +116,11 @@ const projectListJson = {
                     "text": "GitHub"
                 }
             ]
+        },
+        {
+            "title": "Soundboard for kids",
+            "subtitle": "C#, .NET MAUI, Android, iOS",
+            "description": "Simple mobile app for small children: tap an animal picture to hear the sound it makes."
         },
         {
             "title": "Baby calculator",
@@ -105,10 +142,10 @@ const projectListJson = {
         {
             "title": "BEBS.",
             "subtitle": "PHP, WordPress, Oxygen, SQLite",
-            "description": "Created a blog website for my wife on a WordPress platform, with a few custom functionalities. It's pretty simple and elegant, but the real magic is behind the hood where all data is stored on SQLite, instead of dedicated RDBMS.",
+            "description": "Blog website for my wife on WordPress, with a few custom features including a custom plugin for backups. It's simple and elegant, but the real magic is under the hood: all data is stored in SQLite instead of a dedicated database server.",
             "links": [
                 {
-                    "url": "http://blog.luka-pejakovic.from.hr",
+                    "url": "https://bebs.com.hr",
                     "icon": "globe",
                     "text": "Preview"
                 }

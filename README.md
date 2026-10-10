@@ -62,9 +62,9 @@ The page loads `bootstrap.trimmed.css`: only the Bootstrap rules this page uses 
 
 ## Featured projects
 
-**Professional:** 4D Wand IMC web shop & mobile app, WandStat, 4D WatchDog Service, Fresh Service, 4D Loyalty, WebSocket Service. These are C#/.NET apps (ASP.NET MVC/Core, Xamarin.Forms, .NET MAUI) using MSSQL or SQLite.
+**Professional:** 4D Web Shop (WordPress/WooCommerce e-commerce platform integrated with the 4D Wand ERP), the 4D Wand IMC mobile app (migrated from Xamarin.Forms to .NET MAUI), a document exchange platform (.NET MAUI and Rust), WebSocket Service (.NET 8 Native AOT), a Rust real-time messaging server, a release notes service, 4D Loyalty, plus earlier projects (ASP.NET web shop, WandStat, 4D WatchDog Service, Fresh Service).
 
-**Private:** this portfolio site, [Baby calculator](https://github.com/lpejakovic/baby-calculator) (Python/Flask) and the BEBS. blog (WordPress on SQLite).
+**Private:** Battleship multiplayer (ASP.NET Core, SignalR, Vue 3), this portfolio site, Soundboard for kids (.NET MAUI), [Baby calculator](https://github.com/lpejakovic/baby-calculator) (Python/Flask) and the BEBS. blog (WordPress on SQLite).
 
 ## Running locally
 
