@@ -4,21 +4,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Luka Pejaković" />
+  <meta name="theme-color" content="#333333" />
   <title>Team Lead &amp; Software Engineer | Luka Pejaković</title>
   <meta name="description"
-    content="Software engineer and team lead working in full-stack web and mobile development since 2017. Experienced in .NET, .NET MAUI, PHP, WordPress/WooCommerce and databases.">
+    content="Team lead and software engineer building full-stack web and mobile apps since 2017, with .NET, .NET MAUI, PHP, WordPress/WooCommerce and SQL.">
   <link rel="canonical" href="https://luka-pejakovic.from.hr/">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Team Lead &amp; Software Engineer | Luka Pejaković">
   <meta property="og:description"
-    content="Software engineer and team lead working in full-stack web and mobile development since 2017. Experienced in .NET, .NET MAUI, PHP, WordPress/WooCommerce and databases.">
+    content="Team lead and software engineer building full-stack web and mobile apps since 2017, with .NET, .NET MAUI, PHP, WordPress/WooCommerce and SQL.">
   <meta property="og:image" content="https://luka-pejakovic.from.hr/assets/img/og-image.jpg?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Luka Pejaković, Team Lead &amp; Software Engineer">
   <meta property="og:url" content="https://luka-pejakovic.from.hr/">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
+  <meta property="profile:first_name" content="Luka">
+  <meta property="profile:last_name" content="Pejaković">
+  <meta property="profile:username" content="lpejakovic">
   <meta property="og:site_name" content="Luka Pejaković Portfolio Website">
   <meta property="og:locale" content="en_US">
 
@@ -26,44 +31,106 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Team Lead &amp; Software Engineer | Luka Pejaković">
   <meta name="twitter:description"
-    content="Software engineer and team lead working in full-stack web and mobile development since 2017. Experienced in .NET, .NET MAUI, PHP, WordPress/WooCommerce and databases.">
+    content="Team lead and software engineer building full-stack web and mobile apps since 2017, with .NET, .NET MAUI, PHP, WordPress/WooCommerce and SQL.">
   <meta name="twitter:image" content="https://luka-pejakovic.from.hr/assets/img/og-image.jpg?v=2">
   <meta name="twitter:image:alt" content="Luka Pejaković, Team Lead &amp; Software Engineer">
-  <meta name="twitter:url" content="https://luka-pejakovic.from.hr/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/img/favicon_lp.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <!-- Fonts -->
   <link rel="preload" href="assets/fonts/roboto-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/fonts.css?v=2610114" />
+  <link rel="stylesheet" href="assets/css/fonts.css?v=2610115" />
   <!-- 3rd party CSS -->
-  <link rel="stylesheet" href="assets/vendor/bootstrap.trimmed.css?v=2610114" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap.trimmed.css?v=2610115" />
   <link rel="stylesheet" href="assets/vendor/aos.css" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css?v=2610114" />
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css?v=2610115" />
 
-  <!-- Schema.org Markup for Organization -->
+  <!-- Structured data (schema.org) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Luka Pejaković",
-      "url": "https://luka-pejakovic.from.hr",
-      "sameAs": [
-        "https://www.linkedin.com/in/pejakovic-luka",
-        "https://github.com/lpejakovic"
-      ],
-      "jobTitle": "Team Lead & Software Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "4th Dimension d.o.o."
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Faculty of Engineering, University of Rijeka"
-      },
-      "knowsAbout": ["C#", "PHP", "JavaScript", "TypeScript", "Rust", "Python", "SQL", "ASP.NET Core", "SignalR", ".NET MAUI", "Xamarin.Forms", "WordPress", "WooCommerce", "Vue.js", "MSSQL", "MySQL", "SQLite", "Git", "Playwright", "software architecture", "technical leadership", "code review", "project planning", "ERP integration", "e-commerce", "mobile development"]
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://luka-pejakovic.from.hr/#website",
+          "url": "https://luka-pejakovic.from.hr/",
+          "name": "Luka Pejaković",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://luka-pejakovic.from.hr/#profilepage",
+          "url": "https://luka-pejakovic.from.hr/",
+          "name": "Team Lead & Software Engineer | Luka Pejaković",
+          "isPartOf": {
+            "@id": "https://luka-pejakovic.from.hr/#website"
+          },
+          "mainEntity": {
+            "@id": "https://luka-pejakovic.from.hr/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://luka-pejakovic.from.hr/#person",
+          "name": "Luka Pejaković",
+          "givenName": "Luka",
+          "familyName": "Pejaković",
+          "url": "https://luka-pejakovic.from.hr/",
+          "image": "https://luka-pejakovic.from.hr/assets/img/profile-placeholder.jpg",
+          "description": "Team lead and software engineer at 4th Dimension, building full-stack web and mobile applications since 2017.",
+          "jobTitle": "Team Lead & Software Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "4th Dimension d.o.o."
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Faculty of Engineering, University of Rijeka"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zagreb",
+            "addressCountry": "HR"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/pejakovic-luka",
+            "https://github.com/lpejakovic"
+          ],
+          "knowsAbout": [
+            "C#",
+            "PHP",
+            "JavaScript",
+            "TypeScript",
+            "Rust",
+            "Python",
+            "SQL",
+            "ASP.NET Core",
+            "SignalR",
+            ".NET MAUI",
+            "Xamarin.Forms",
+            "WordPress",
+            "WooCommerce",
+            "Vue.js",
+            "MSSQL",
+            "MySQL",
+            "SQLite",
+            "Git",
+            "Playwright",
+            "software architecture",
+            "technical leadership",
+            "code review",
+            "project planning",
+            "ERP integration",
+            "e-commerce",
+            "mobile development"
+          ]
+        }
+      ]
     }
   </script>
 </head>
@@ -94,7 +161,7 @@
       <svg class="icon" aria-hidden="true"><use href="#i-bars"></use></svg>
     </button>
     <div class="profile-img">
-      <img src="assets/img/profile-placeholder.jpg" alt="Profile image" width="800" height="800" class="img-fluid rounded-circle" />
+      <img src="assets/img/profile-placeholder.jpg" alt="Luka Pejaković" width="800" height="800" class="img-fluid rounded-circle" />
     </div>
     <a href="#home" class="logo d-flex align-items-center justify-content-center">
       <span class="site-name">Luka Pejaković</span>
@@ -239,6 +306,251 @@
         <h2>Portfolio</h2>
       </div>
       <div class="container aos-init" data-aos="fade-up" data-aos-delay="100" id="projects-container">
+        <h3>Professional</h3>
+        <div class="row">
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">4D Web Shop</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>PHP</li><li>WordPress</li><li>WooCommerce</li><li>JavaScript</li><li>SCSS</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">E-commerce platform built as a WordPress/WooCommerce plugin and theme, synchronized with the 4D Wand ERP: live stock and pricing, B2B price lists, advanced shipping rules, payment integrations, CSV import/export and a form builder. I lead the team developing it, own the architecture, review the team&#x27;s pull requests and write a large share of the code.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">4D Wand IMC - mobile application</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>.NET MAUI (.NET 10)</li><li>SQLite</li><li>Android</li><li>iOS</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Cross-platform mobile app for inventory, order picking, point of sale, returns and barcode scanning, with offline storage and biometric login. Led its migration from Xamarin.Forms to .NET MAUI, including support for dedicated hardware scanners.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="https://play.google.com/store/apps/details?id=com.x4d.scanner" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-android"></use></svg>
+                  <span>Android<span class="sr-only"> (4D Wand IMC - mobile application)</span></span>
+                </a>
+                <a href="https://apps.apple.com/hr/app/4d-wand-imc/id1407622866" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-apple"></use></svg>
+                  <span>iOS<span class="sr-only"> (4D Wand IMC - mobile application)</span></span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Document exchange platform</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>.NET MAUI</li><li>Rust</li><li>Axum</li><li>SQL</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Platform for sending documents to a company, organized into cases: a .NET MAUI mobile app with QR-code onboarding, PIN and biometric protection, backed by a Rust REST API. Led the planning and architecture.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">WebSocket Service</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>.NET 8 (Native AOT)</li><li>Minimal API</li><li>xUnit</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Gateway that turns REST requests into WebSocket messages, connecting web and mobile clients to the ERP. Persistent connections with automatic reconnects, health checks, request validation and a host allow-list, published as a native Linux binary.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Real-time messaging server</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>Rust</li><li>Tokio</li><li>Axum</li><li>WebSockets</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">WebSocket server with group and channel subscriptions, secure WSS with automatic certificate reload and graceful shutdown. Contributed performance improvements to message delivery and the deployment setup.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Release notes service</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>PHP</li><li>WordPress</li><li>REST API</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">WordPress plugin that stores product version histories in dedicated database tables and publishes release notes and latest versions through a REST API, with an admin interface for managing them.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">4D Loyalty</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>.NET MAUI (.NET 10)</li><li>SQLite</li><li>Android</li><li>iOS</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Cross-platform mobile app for storing and quickly accessing loyalty program cards or any other barcodes, available offline.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="https://play.google.com/store/apps/details?id=com.x4d.loyalty" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-android"></use></svg>
+                  <span>Android<span class="sr-only"> (4D Loyalty)</span></span>
+                </a>
+                <a href="https://apps.apple.com/hr/app/4d-loyalty/id6472644910" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-apple"></use></svg>
+                  <span>iOS<span class="sr-only"> (4D Loyalty)</span></span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <details class="earlier-projects">
+          <summary>Earlier projects (4)</summary>
+          <div class="row">
+            <div class="col-xl-4 col-lg-6">
+              <article class="card">
+                <div class="card-header bg-transparent">
+                  <h4 class="card-title">4D Wand IMC - web shop</h4>
+                  <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>ASP.NET MVC 4</li><li>EF4</li><li>MSSQL</li><li>Bootstrap</li><li>jQuery</li></ul>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Universal web shop application that seamlessly synchronizes data with a proprietary ERP software system.</p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                  <a href="https://katalog06.4d.hr" target="_blank" rel="noopener" class="card-link">
+                    <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+                    <span>Preview<span class="sr-only"> (4D Wand IMC - web shop)</span></span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+              <article class="card">
+                <div class="card-header bg-transparent">
+                  <h4 class="card-title">WandStat</h4>
+                  <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>ASP.NET MVC 4</li><li>EF4</li><li>MSSQL</li><li>Bootstrap</li><li>jQuery</li></ul>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Web application dedicated for collecting telemetry data from users of proprietary ERP software system.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+              <article class="card">
+                <div class="card-header bg-transparent">
+                  <h4 class="card-title">4D WatchDog Service</h4>
+                  <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>.NET Framework 4.8</li></ul>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Windows service responsible for monitoring application lifecycles, ensuring the continuous and scheduled execution of watched applications.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-xl-4 col-lg-6">
+              <article class="card">
+                <div class="card-header bg-transparent">
+                  <h4 class="card-title">Fresh Service</h4>
+                  <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>ASP.NET Core 5</li><li>EF6</li><li>MSSQL</li><li>Bootstrap</li><li>jQuery</li></ul>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Centralized web application with a primary focus on license verification and seamless distribution of updated versions of proprietary ERP software. Additionally, an internal document and data sharing service.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <h3>Private</h3>
+        <div class="row">
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Battleship multiplayer</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>ASP.NET Core</li><li>SignalR</li><li>Vue 3</li><li>SQLite</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Real-time online multiplayer Battleship with several game modes (classic, rapid and blitz with increment), server-side game state that prevents cheating, a mobile-friendly interface, automated tests and CI, self-hosted behind Nginx.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="https://battleship.luka-pejakovic.from.hr" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+                  <span>Play<span class="sr-only"> (Battleship multiplayer)</span></span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Personal portfolio page</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">This single-page portfolio, built without frameworks: self-hosted fonts and libraries, inline SVG icons, a strict Content-Security-Policy and no third-party requests.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="https://luka-pejakovic.from.hr" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+                  <span>Preview<span class="sr-only"> (Personal portfolio page)</span></span>
+                </a>
+                <a href="https://github.com/lpejakovic/portfolio-site" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                  <span>GitHub<span class="sr-only"> (Personal portfolio page)</span></span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Soundboard for kids</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>C#</li><li>.NET MAUI</li><li>Android</li><li>iOS</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Simple mobile app for small children: tap an animal picture to hear the sound it makes.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">Baby calculator</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>Python</li><li>Flask</li><li>Gunicorn</li><li>HTML</li><li>CSS</li><li>JS</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Simple website that takes a date of birth as input, calculates the difference and returns how many weeks the baby is old.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="https://bc.luka-pejakovic.from.hr" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+                  <span>Preview<span class="sr-only"> (Baby calculator)</span></span>
+                </a>
+                <a href="https://github.com/lpejakovic/baby-calculator" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                  <span>GitHub<span class="sr-only"> (Baby calculator)</span></span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <article class="card">
+              <div class="card-header bg-transparent">
+                <h4 class="card-title">BEBS.</h4>
+                <ul class="tags tags-small" aria-label="Technologies"><li>PHP</li><li>WordPress</li><li>Oxygen</li><li>SQLite</li></ul>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Blog website for my wife on WordPress, with a few custom features including a custom plugin for backups. It&#x27;s simple and elegant, but the real magic is under the hood: all data is stored in SQLite instead of a dedicated database server.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="https://bebs.com.hr" target="_blank" rel="noopener" class="card-link">
+                  <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+                  <span>Preview<span class="sr-only"> (BEBS.)</span></span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
     <!-- RESUME -->
@@ -474,8 +786,7 @@
   <!-- JS files -->
   <script src="assets/vendor/typed.umd.js"></script>
   <script src="assets/vendor/aos.js"></script>
-  <script src="assets/js/projects.js?v=2610114"></script>
-  <script src="assets/js/main.js?v=2610114"></script>
+  <script src="assets/js/main.js?v=2610115"></script>
 </body>
 
 </html>
