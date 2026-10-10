@@ -28,8 +28,8 @@ A single-page, responsive site with a fixed sidebar navigation (it becomes a tog
 │   │   └── main.css      # Custom styles (CSS variables, layout, responsive breakpoints)
 │   ├── js/
 │   │   └── main.js       # UI behavior: nav toggle, scrollspy, scroll-to-top, email links, AOS & Typed init
-│   ├── fonts/            # Roboto, Raleway, Poppins (woff2, latin + latin-ext subsets)
-│   ├── img/              # Favicons, apple-touch-icon, profile placeholder, hero background (webp), link-preview image
+│   ├── fonts/            # Roboto, Raleway, Poppins (woff2: latin + Croatian-letters subsets)
+│   ├── img/              # Favicons, apple-touch-icon, profile placeholder, hero backgrounds (webp, incl. a portrait crop for phones), link-preview image
 │   └── vendor/           # Third-party libraries: Bootstrap CSS (trimmed), AOS, Typed.js
 ├── robots.txt            # Allows all crawlers, points to sitemap
 └── sitemap.xml           # Single-URL sitemap
